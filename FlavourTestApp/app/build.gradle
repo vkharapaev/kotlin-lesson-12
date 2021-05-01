@@ -30,6 +30,18 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    flavorDimensions 'apptype'
+    productFlavors {
+        free {
+            dimension 'apptype'
+            applicationIdSuffix '.free'
+        }
+        paid {
+            dimension 'apptype'
+            applicationIdSuffix '.paid'
+        }
+    }
 }
 
 dependencies {
